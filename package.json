@@ -1,0 +1,10 @@
+{
+  "name": "study-calculator",
+  "version": "0.1.0",
+  "description": "GitHub 学習用の電卓アプリ",
+  "main": "src/calculator.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "license": "MIT"
+}
