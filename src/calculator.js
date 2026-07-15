@@ -6,4 +6,12 @@ function add(a, b) {
   return a + b;
 }
 
-module.exports = { add };
+// 2つの数値の商を返す。0 で割ろうとした場合はエラーを投げる。
+function divide(a, b) {
+  if (b === 0) {
+    throw new Error('0 では割れません');
+  }
+  return a / b;
+}
+
+module.exports = { add, divide };
