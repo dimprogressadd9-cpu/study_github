@@ -6,4 +6,10 @@ function add(a, b) {
   return a + b;
 }
 
-module.exports = { add };
+// 2つの数値の商を返す。
+// 【わざとバグ】0 で割ったときにエラーを投げず Infinity を返してしまう。
+function divide(a, b) {
+  return a / b;
+}
+
+module.exports = { add, divide };
