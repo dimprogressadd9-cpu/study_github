@@ -5,6 +5,9 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  workflow_dispatch:            # 手動実行(Actions タブの「Run workflow」ボタン)
+  schedule:
+    - cron: '0 0 * * 1'         # 定期実行: 毎週月曜 00:00 UTC
 
 jobs:
   test:
@@ -15,3 +18,16 @@ jobs:
         with:
           node-version: '20'
       - run: npm test
+
+  deploy:
+    needs: test                  # test が成功したときだけ実行
+    # master への push(=マージ)のときだけデプロイ。PR や定期実行では走らない。
+    if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+    runs-on: ubuntu-latest
+    steps:
+      - name: デプロイ(デモ)
+        run: echo "master にマージされたのでデプロイします(ここに実デプロイコマンド)"
+      - name: Secret を使う(ログ上はマスクされる)
+        run: echo "使用トークン = $DEPLOY_TOKEN"
+        env:
+          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
