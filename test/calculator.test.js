@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert');
-const { add, divide } = require('../src/calculator');
+const { add, subtract, divide } = require('../src/calculator');
 
 test('add: 1 + 2 = 3', () => {
   assert.strictEqual(add(1, 2), 3);
@@ -8,6 +8,10 @@ test('add: 1 + 2 = 3', () => {
 
 test('add: マイナスも扱える (-2 + 5 = 3)', () => {
   assert.strictEqual(add(-2, 5), 3);
+});
+
+test('subtract : 2 - 1 = 1', () => {
+  assert.strictEqual(subtract (2, 1), 1);
 });
 
 test('divide: 10 / 2 = 5', () => {
