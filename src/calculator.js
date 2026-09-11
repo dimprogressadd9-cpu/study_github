@@ -6,6 +6,11 @@ function add(a, b) {
   return a + b;
 }
 
+// 引き算
+function subtract (a, b) {
+  return a - b;
+}
+
 // 2つの数値の商を返す。0 で割ろうとした場合はエラーを投げる。
 function divide(a, b) {
   if (b === 0) {
@@ -14,4 +19,4 @@ function divide(a, b) {
   return a / b;
 }
 
-module.exports = { add, divide };
+module.exports = { add, subtract, divide };
