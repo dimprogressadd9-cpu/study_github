@@ -1,0 +1,14 @@
+changelog:
+  categories:
+    - title: "🚀 新機能"
+      labels:
+        - "type:feature"
+    - title: "🐛 バグ修正"
+      labels:
+        - "type:bug"
+    - title: "📝 ドキュメント"
+      labels:
+        - "type:docs"
+    - title: "🔧 その他"
+      labels:
+        - "*"
