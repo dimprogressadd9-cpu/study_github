@@ -1,0 +1,8 @@
+type:feature:
+  - head-branch: ['^feature/']
+
+type:bug:
+  - head-branch: ['^fix/']
+
+type:docs:
+  - head-branch: ['^docs/']
