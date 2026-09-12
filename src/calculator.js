@@ -20,8 +20,8 @@ function divide(a, b) {
 }
 
 // 掛け算
-function multiplication(a, b) {
+function multiply(a, b) {
   return a * b;
 }
 
-module.exports = { add, subtract, divide, multiplication };
+module.exports = { add, subtract, divide, multiply };
