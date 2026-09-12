@@ -19,4 +19,9 @@ function divide(a, b) {
   return a / b;
 }
 
-module.exports = { add, subtract, divide };
+// 掛け算
+function multiplication(a, b) {
+  return a * b;
+}
+
+module.exports = { add, subtract, divide, multiplication };
