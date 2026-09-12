@@ -23,5 +23,5 @@ test('divide: 0 で割るとエラーを投げる', () => {
 });
 
 test ('multiplication : 8 * 9 = 72', () => {
-  assert.throws(() => divide(8, 9), 72);
+  assert.strictEqual(multiplication(8, 9), 72);
 });
