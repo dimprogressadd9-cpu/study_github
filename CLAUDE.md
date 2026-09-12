@@ -66,7 +66,12 @@
 > Sprint 2完了(2026-09-12): Issue #2(引き算機能)を実装(PR #16)。ローカルにNode.js導入、`npm test`を
 > 実行して確認する流れを追加。子タスク #1〜#4 が全てクローズ済みだったため親タスク #5(MVP)をクローズ、
 > Sprint 2 も完了としてクローズ。電卓アプリ MVP 完成、GitHub Flow の一連の開発サイクルを複数回実践できた。
-> 次のステップ: フェーズ4-3の自動化(Dependabot等)、または GitLab 側での同様の実践。
+> フェーズ4-3完了(2026-09-12): Dependabot(.github/dependabot.yml、github-actions+npm監視)を導入、
+> 実際に actions/checkout・actions/setup-node のv7更新PRを自動生成→コンフリクト解消→マージまで体験。
+> PR自動ラベル付け(actions/labeler + .github/labeler.yml、ブランチ名prefixで type:* 付与)を導入し、
+> 動作確認済み。リリースノート自動生成(.github/release.yml、ラベル別カテゴリ分け)を導入し、
+> v0.1.0 タグで実際に Generate release notes を実行して動作確認。4-3の発展課題を一通り実践できた。
+> 次のステップ: GitLab 側での同様の実践(MR・GitLab CI/CD)、または実際の小さな案件での通し練習。
 
 ---
 
