@@ -1,6 +1,6 @@
 const test = require('node:test');
 const assert = require('node:assert');
-const { add, subtract, divide } = require('../src/calculator');
+const { add, subtract, divide, multiplication } = require('../src/calculator');
 
 test('add: 1 + 2 = 3', () => {
   assert.strictEqual(add(1, 2), 3);
@@ -20,4 +20,8 @@ test('divide: 10 / 2 = 5', () => {
 
 test('divide: 0 で割るとエラーを投げる', () => {
   assert.throws(() => divide(10, 0), /0/);
+});
+
+test ('multiplication : 8 * 9 = 72', () => {
+  assert.strictEqual(multiplication(8, 9), 72);
 });
